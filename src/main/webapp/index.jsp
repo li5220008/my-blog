@@ -73,6 +73,13 @@
                 <li><a href="../navbar/">Default</a></li>
                 <li><a href="../navbar-static-top/">Static top</a></li>
                 <li class="active"><a href="./">Fixed top</a></li>
+                <c:if test="${user !=null}">
+                    <li>欢迎您：${user.nickname}<a href="${pageContext.request.contextPath}/user/logout/do">注销</a></li>
+                </c:if>
+                <c:if test="${user ==null}">
+                    <li><a href="${pageContext.request.contextPath}/user/register/ui">注册</a></li>
+                    <li><a href="${pageContext.request.contextPath}/user/login/ui">登陆</a></li>
+                </c:if>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
