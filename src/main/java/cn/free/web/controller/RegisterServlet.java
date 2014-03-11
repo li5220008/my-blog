@@ -55,8 +55,6 @@ public class RegisterServlet extends HttpServlet {
         req.getRequestDispatcher("/WEB-INF/message.jsp").forward(req,resp);
     }
 
-
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req, resp);    //To change body of overridden methods use File | Settings | File Templates.

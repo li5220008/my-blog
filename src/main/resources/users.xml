@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <users>
-    <user>11</user>
+    <user id="56c2140d-ba18-47b8-8078-bd9c6eadab79" username="admm" password="4QrcOUm6Wau+VuBX8g+IPg==" email="li5220008@gmail.com" birthday="1955-1-2 0:00:00" nickname="王八"/>
+    <user id="a1041fbb-e563-424c-9a3a-1cd6b3784d8f" username="admin" password="4QrcOUm6Wau+VuBX8g+IPg==" email="li5220008@gmail.com" birthday="1999-2-3 0:00:00" nickname="王八"/>
 </users>

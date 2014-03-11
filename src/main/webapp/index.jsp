@@ -71,7 +71,8 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${user !=null}">
-                    <li>欢迎您：${user.nickname}<a href="${pageContext.request.contextPath}/user/logout/do">注销</a></li>
+                    <li><a href="javascript:void(0);"><span class="text-primary"> 欢迎您：${user.nickname}</span></a></li>
+                    <li><a href="${pageContext.request.contextPath}/user/logout/do"><strong>注销</strong></a></li>
                 </c:if>
                 <c:if test="${user ==null}">
                     <li><a href="${pageContext.request.contextPath}/user/register/ui">注册</a></li>
