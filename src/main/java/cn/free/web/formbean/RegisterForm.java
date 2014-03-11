@@ -128,14 +128,14 @@ public class RegisterForm {
         }
         if(this.birthday == null || "".equals(this.email.trim())){
             isOk = false;
-            errors.put("email", "日期不能为空");
+            errors.put("birthday", "日期不能为空");
         }else {
             DateLocaleConverter dc = new DateLocaleConverter();
             try {
                 dc.convert(this.birthday);
             } catch (Exception e) {
                 isOk = false;
-                errors.put("email", "日期格式不正确！");
+                errors.put("birthday", "日期格式不正确！");
                 //e.printStackTrace();
             }
         }

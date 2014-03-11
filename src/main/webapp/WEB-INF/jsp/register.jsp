@@ -6,34 +6,105 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <script type="text/javascript">
-        function changeImg(img){
-            img.src=img.src+'?'+new Date().getTime()
-        }
-    </script>
-    <style type="text/css">
-        .error{
-            color: red;
-        }
-    </style>
-</head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap core CSS -->
+    <link href="/html/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/public/style/global.css" rel="stylesheet">
+    <link href="/public/style/validate/style.css" rel="stylesheet"/>
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
 <body>
-<form action="${pageContext.request.contextPath}/user/register/do" method="post">
-    点击：<a href="/post/do?username=xiaoming?password=wangwu">get</a><br/>
-    <div class="message">${message}</div>
-    用户名：<input type="text" name="username" value="${form.username}"/> <span class="error">${form.errors.username}</span><br/>
-    昵称：<input type="text" name="nickname" value="${form.nickname}"/> <span class="error">${form.errors.nickname}</span><br/>
-    密码：<input type="password" name="password" value="${form.password}"/> <span class="error">${form.errors.password}</span><br/>
-    重复密码：<input type="password" name="repassword" value="${form.repassword}"/> <span class="error">${form.errors.repassword}</span><br/>
-    生日：<input type="text" name="birthday" value="${form.birthday}" /> <span class="error">${form.errors.birthday}</span><br/>
-    邮箱：<input type="text" name="email" value="${form.email}" /> <span class="error">${form.errors.email}</span><br/>
-    认证码：<input type="text" name="checkcode" value="${form.checkcode}"/><span class="error">${form.errors.checkcode}</span>
-    <img src="/random/img" alt="点击刷新" style="cursor: pointer" onclick="changeImg(this)"><br/>
-    <input type="submit"  value="注册"/>
-</form>
+<div class="container">
+    <form id="register-form" class="form-register form-horizontal" role="form" action="${pageContext.request.contextPath}/user/register/do" method="post">
+        <div class="form-group">
+            <label for="username" class="col-sm-3 control-label">用户名：</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="text" id="username" placeholder="用户名" name="username" value="${form.username}"/>
+            </div>
+            <div class="col-sm-4">
+                <label  class="control-label error">${form.errors.username}</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="nickname" class="col-sm-3 control-label">昵称：</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="text" id="nickname" placeholder="昵称" name="nickname" value="${form.nickname}"/>
+            </div>
+            <div class="col-sm-4">
+                <label class="control-label error">${form.errors.nickname}</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">密码：</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="password" id="password" placeholder="密码" name="password" value="${form.password}"/>
+            </div>
+            <div class="col-sm-4">
+                <label class="error">${form.errors.password}</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="repassword" class="col-sm-3 control-label">重复密码：</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="password" id="repassword" placeholder="重置密码" name="repassword" value="${form.repassword}"/>
+            </div>
+            <div class="col-sm-4">
+                <label class="control-label error">${form.errors.repassword}</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="birthday" class="col-sm-3 control-label">生日：</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="text" id="birthday" placeholder="生日" name="birthday" value="${form.birthday}" />
+            </div>
+            <div class="col-sm-4">
+                <label class="control-label error">${form.errors.birthday}</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-3 control-label">邮箱：</label>
+            <div class="col-sm-5">
+                <input class="form-control" check-type="mail" mail-message="邮箱格式不正确！" type="text" id="email" placeholder="邮箱" name="email" value="${form.email}" />
+            </div>
+            <div class="col-sm-4">
+                <label class="control-label error">${form.errors.email}</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="checkcode" class="col-sm-3 control-label">认证码：</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="text" id="checkcode" placeholder="认证码" name="checkcode" value="${form.checkcode}"/>
+            </div>
+            <div class="col-sm-4">
+                <img src="${pageContext.request.contextPath}/random/img" alt="点击刷新" class="img-rounded" style="cursor: pointer" onclick="changeImg(this)">
+            </div>
+            <%--<div class="col-sm-3">
+                <label class="control-label error">${form.errors.checkcode}</label>
+            </div>--%>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-2">
+                <button type="submit" class="btn btn-primary btn-default btn-block">注 册</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/public/js/jquery-1.8.0.js"></script>
+<script src="/public/js/global.js"></script>
+<script src="/public/js/validate/jquery.validate.min.js"></script>
+<script src="/public/js/validate/script.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </body>
 </html>
