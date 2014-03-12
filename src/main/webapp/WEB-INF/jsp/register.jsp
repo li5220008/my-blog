@@ -81,12 +81,18 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="col-sm-3 control-label"></label>
+            <div class="col-sm-9">
+                <img src="${pageContext.request.contextPath}/random/img" alt="点击刷新" class="img-rounded" style="cursor: pointer" onclick="changeImg(this)">
+            </div>
+        </div>
+        <div class="form-group">
             <label for="checkcode" class="col-sm-3 control-label">认证码：</label>
             <div class="col-sm-5">
                 <input class="form-control" type="text" id="checkcode" placeholder="认证码" name="checkcode" value="${form.checkcode}"/>
             </div>
             <div class="col-sm-4">
-                <img src="${pageContext.request.contextPath}/random/img" alt="点击刷新" class="img-rounded" style="cursor: pointer" onclick="changeImg(this)">
+                <label class="control-label error">${form.errors.checkcode}</label>
             </div>
             <%--<div class="col-sm-3">
                 <label class="control-label error">${form.errors.checkcode}</label>
@@ -99,6 +105,23 @@
         </div>
     </form>
 </div>
+<%--<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3
+            col-xs-6 .col-sm-3
+            通过调整浏览器的宽度或在手机上即可查看这些案例的实际效果。
+        </div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix visible-xs"></div>
+
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    </div>
+</div>--%>
+</body>
+</html>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/public/js/jquery-1.8.0.js"></script>
 <script src="/public/js/global.js"></script>
@@ -106,5 +129,3 @@
 <script src="/public/js/validate/script.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-</body>
-</html>

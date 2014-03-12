@@ -4,10 +4,6 @@
            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
            version="3.0">
-    <context-param>
-        <param-name>javax.faces.CONFIG_FILES</param-name>
-        <param-value>/users.xml</param-value>
-    </context-param>
     <servlet>
         <servlet-name>loginui</servlet-name>
         <servlet-class>cn.free.web.UI.LoginUIServlet</servlet-class>
@@ -55,6 +51,14 @@
     <servlet-mapping>
         <servlet-name>randomImg</servlet-name>
         <url-pattern>/random/img</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>blog</servlet-name>
+        <servlet-class>cn.free.web.UI.BlogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>blog</servlet-name>
+        <url-pattern>/blog/ui</url-pattern>
     </servlet-mapping>
 
 </web-app>

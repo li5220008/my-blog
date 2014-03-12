@@ -17,6 +17,12 @@
     color: red;
 }
 
+.comment-header{
+    padding-top: 40px;
+    text-align: center;
+    border-top: 1px solid #000000;
+}
+
 /*
 自定义栅格间隔
 */
