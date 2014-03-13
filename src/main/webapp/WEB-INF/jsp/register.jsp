@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap core CSS -->
     <link href="/html/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="/public/style/global.css" rel="stylesheet">
+    <link href="/public/style/common.css" rel="stylesheet">
     <link href="/public/style/validate/style.css" rel="stylesheet"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -124,7 +124,7 @@
 </html>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/public/js/jquery-1.8.0.js"></script>
-<script src="/public/js/global.js"></script>
+<script src="/public/js/common.js"></script>
 <script src="/public/js/validate/jquery.validate.min.js"></script>
 <script src="/public/js/validate/script.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

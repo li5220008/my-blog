@@ -16,6 +16,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/public/style/bootstrap.min.css">
 
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/style/common.css">
+
     <!-- Custom styles for this template -->
     <link href="/public/style/navbar-fixed-top.css" rel="stylesheet">
 
@@ -159,25 +161,61 @@
             </div>
 
             <div class="well">
-                <div><img src="${pageContext.request.contextPath}/random/img" alt="点击刷新" class="img-rounded" style="cursor: pointer" onclick="changeImg(this)"></div>
-                <div>文章不错阿！</div>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        Basic panel example
-                        ssl
-                        <p>ss</p>
-                        <h3>hh</h3>
-                        <button type="button">btn</button>
+                <div class="comment-meta">
+                    <div class="comment-meta-left">
+                        <img src="${pageContext.request.contextPath}/random/img" alt="点击刷新" class="img-rounded" onclick="changeImg(this)">
+                        <ul class="comment-name-date">
+                            <li class="comment-name">
+                                <label>张三</label>
+                            </li>
+                            <li>2013/08/11 10:39上午</li>
+                        </ul>
+                    </div>
+                    <ul class="comment-act">
+                        <li class="comment-reply"><a class="comment-reply-link" href="javacript:void(0)">回复</a></li>
+                        <li class="comment-quote"><a href="javascript:void(0);" onclick="">引用</a></li>
+                    </ul>
+                </div>
+                <div class="comment-content">
+                    <p class="text-left text-primary">文章不错阿！狰狞过来吗么么么么上理论上的该叔叔婶婶！</p>
+                </div>
+                <div class="well">
+                    <div class="comment-meta">
+                        <div class="comment-meta-left">
+                            <img src="${pageContext.request.contextPath}/random/img" alt="点击刷新" class="img-rounded" onclick="changeImg(this)">
+                            <ul class="comment-name-date">
+                                <li class="comment-name">
+                                    <label>张三</label>
+                                </li>
+                                <li>2013/08/11 10:39上午</li>
+                            </ul>
+                        </div>
+                        <ul class="comment-act">
+                            <li class="comment-reply"><a class="comment-reply-link" href="javascript:void(0)">回复</a></li>
+                            <li class="comment-quote"><a href="javascript:void(0);" onclick="">引用</a></li>
+                        </ul>
+                    </div>
+                    <div class="comment-content">
+                        <p class="text-left text-primary">文章不错阿！狰狞过来吗么么么么上理论上的该叔叔婶婶！</p>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            Basic panel example
+                            ssl
+                            <p>ss</p>
+                            <h3>hh</h3>
+                            <button type="button">btn</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- post comment
            ================================================== -->
-            <div class="panel panel-default">
+            <div id="comment-panel" class="panel panel-default">
                 <div class="panel-body">
+                    <div class="comment-cancel"><a href="javascript:void(0)" >点击这里取消回复</a></div>
                     <form role="form">
-
                         <div class="form-group">
                             <label for="nickname">昵称</label>
                             <input type="password" class="form-control" id="nickname" placeholder="nickname">
@@ -213,6 +251,10 @@
 <script src="/public/js/application.js"></script>
 <!--<script src="/public/js/bootstrap.min.js"></script>-->
 <script src="/html/metro/docs/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/public/js/common.js"></script>
+<script>
+    commentReply();
+</script>
 <!--<script src="../metro/docs/jquery.unobtrusive-ajax.js"></script>-->
 <!--<script src="../metro/docs/jquery.validate.unobtrusive.js"></script>-->
 <!--<script src="/public/js/metro-bootstrap/metro-docs.js"></script>-->
