@@ -20,9 +20,26 @@ function changeImg(img){
  */
 function commentReply(){
     $(".comment-reply-link").click(function(){
-        $(".comment-cancel").css("display","block");
         var comment = $("#comment-panel");
         var commentC = $(this).closest(".comment-meta");
         commentC.next(".comment-content").after(comment);
+        $(".comment-cancel").css("display","block");
+        $("#content").focus();
+    });
+}
+
+function commentQuote(){
+    $(".comment-quote").click(function(){
+        var commentC = $(this).closest(".comment-meta");
+        var commentCent = commentC.next(".comment-content");
+        $("#content").val(commentCent.html());
+        $("#content").focus();
+    });
+}
+
+function commentCancel(){
+    $(".comment-cancel>a").click(function(){
+        $("#comment-point").after($("#comment-panel"));
+        $(".comment-cancel").css("display","none");
     });
 }

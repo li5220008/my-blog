@@ -192,11 +192,11 @@
                         </div>
                         <ul class="comment-act">
                             <li class="comment-reply"><a class="comment-reply-link" href="javascript:void(0)">回复</a></li>
-                            <li class="comment-quote"><a href="javascript:void(0);" onclick="">引用</a></li>
+                            <li class="comment-quote"><a href="javascript:void(0);">引用</a></li>
                         </ul>
                     </div>
                     <div class="comment-content">
-                        <p class="text-left text-primary">文章不错阿！狰狞过来吗么么么么上理论上的该叔叔婶婶！</p>
+                        <p class="text-left text-primary"><span>kkkk<a href="#">kkk</a></span>文章不错阿！狰狞过来吗么么么么上理论上的该叔叔婶婶！</p>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-body">
@@ -212,6 +212,7 @@
 
             <!-- post comment
            ================================================== -->
+            <div id="comment-point"><!--定位用--></div>
             <div id="comment-panel" class="panel panel-default">
                 <div class="panel-body">
                     <div class="comment-cancel"><a href="javascript:void(0)" >点击这里取消回复</a></div>
@@ -254,6 +255,23 @@
 <script src="${pageContext.request.contextPath}/public/js/common.js"></script>
 <script>
     commentReply();
+    commentQuote();
+    commentCancel();
+
+    var Cat ={
+        name : "",
+        color : ""
+    };
+    var cat1 = {};
+    cat1.name="大毛";
+    cat1.color = "黄色";
+    var cat2 ={};
+    cat2.name="二毛";
+    cat2.color="黑色"
+
+    var cat3 = new Cat();
+    cat3.name = "大黄";
+    cat3.color = "白色";
 </script>
 <!--<script src="../metro/docs/jquery.unobtrusive-ajax.js"></script>-->
 <!--<script src="../metro/docs/jquery.validate.unobtrusive.js"></script>-->
